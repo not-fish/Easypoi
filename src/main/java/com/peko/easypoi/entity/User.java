@@ -35,6 +35,10 @@ public class User implements Serializable {
     @ExcelCollection(name = "订单列表")
     private List<Order> orders;
 
+    //type = 2 时会根据图片绝对路径去找图片
+    @Excel(name = "头像",width = 20.0 ,type = 2,height = 20)
+    private String photo;
+
     //重载hobbyStr的get方法
      public String getHobbyStr(){
         StringBuilder sb = new StringBuilder();

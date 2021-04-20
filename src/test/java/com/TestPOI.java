@@ -47,6 +47,7 @@ public class TestPOI {
             orders.add(new Order("01","衣服"));
             orders.add(new Order("02","裤子"));
             user.setOrders(orders);
+            user.setPhoto("E:/myexcel/csdn-menu/antd.png");
             lists.add(user);
         }
 
