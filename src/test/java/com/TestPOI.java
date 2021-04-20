@@ -2,6 +2,8 @@ package com;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
+import com.peko.easypoi.entity.Card;
+import com.peko.easypoi.entity.Order;
 import com.peko.easypoi.entity.User;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.Test;
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -38,6 +41,12 @@ public class TestPOI {
             user.setName("用户_"+i);
             user.setAge(String.valueOf(10+i));
             user.setBirthday(new Date());
+            user.setHobby(Arrays.asList("打波","踢波"));
+            user.setCard(new Card("123456","旮旯"));
+            List<Order> orders = new ArrayList<>();
+            orders.add(new Order("01","衣服"));
+            orders.add(new Order("02","裤子"));
+            user.setOrders(orders);
             lists.add(user);
         }
 
